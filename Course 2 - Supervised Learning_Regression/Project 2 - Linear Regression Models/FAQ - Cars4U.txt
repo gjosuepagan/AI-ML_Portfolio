@@ -1,0 +1,35 @@
+1. How should one approach the Cars4U project?
+Before starting the project, please read the problem statement carefully and go through the criteria and descriptions mentioned in the rubric.
+Once you understand the task, download the dataset and import it into a Jupyter notebook to get started with the project.
+To work on the project, you should start with data preprocessing and EDA using descriptive statistics and visualizations.
+Once the EDA is completed and data is preprocessed, you can use the data to build a model and check its performance.
+It is important to close the analysis with key findings and recommendations to the business.
+ 
+
+2. How to convert Mileage from kmpl to km/kg?
+kmpl and km/kg are units associated with different types of fuel, but both the units refer to the distance covered (in km) per unit of fuel. So, there is no need to convert between them. The units can be stripped off and the numerical values can be used as they are.
+
+ 
+
+3. Is it advisable to treat 'Seats' as a categorical variable?
+If a numerical variable does not have too many distinct values, one can try treating each distinct value as a different category. The best approach in such a case would be to try out both approaches (numerical and categorical treatment) and keep the one that gives a better model performance.
+
+ 
+
+4. Since we have missing values in the dataset, what is the best way to handle or treat those missing values?
+There are multiple ways of dealing with missing values.
+
+It is generally preferred to drop the missing values in the target variable.
+It is generally preferred to impute the missing values in the independent variables using a suitable strategy.
+For an unskewed numerical variable, the mean of the variable can be used to impute missing values.
+For a skewed numerical variable, the median of the variable can be used to impute missing values.
+For a categorical variable, the most frequent value can be used to impute missing values.
+ 
+
+5. Should I drop the original columns which were transformed or keep all of the columns?
+Yes, you should drop the original columns which were transformed.
+
+ 
+
+6. Since Price is the dependent variable, should I use Price as the dependent variable or use Price_log .
+You should build the model using both the original "price" column & "log of price" column separately & compare the model performance in both cases.
